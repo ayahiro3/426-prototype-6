@@ -9,6 +9,36 @@
     "/Applications/Unity/Hub/Editor/6000.3.24f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/BuiltInPackagesCombined.sha1"
   ],
   "outputs": {
+    "com.unity.2d.animation@13.0.6": {
+      "name": "com.unity.2d.animation",
+      "displayName": "2D Animation",
+      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.2d.animation@cd6c3841e39a",
+      "fingerprint": "cd6c3841e39a6b6df9c6ac0e708819e2176a6810",
+      "editorCompatibility": "6000.3.0a1",
+      "version": "13.0.6",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.2d.aseprite@3.0.2": {
+      "name": "com.unity.2d.aseprite",
+      "displayName": "2D Aseprite Importer",
+      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.2d.aseprite@20edb5643ab5",
+      "fingerprint": "20edb5643ab59e7b1107541ab66691c4d5282cc8",
+      "editorCompatibility": "6000.3.0a2",
+      "version": "3.0.2",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.2d.psdimporter@12.0.2": {
+      "name": "com.unity.2d.psdimporter",
+      "displayName": "2D PSD Importer",
+      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.2d.psdimporter@f207d91d598d",
+      "fingerprint": "f207d91d598dbf43af8d25dec9312e71ece7531a",
+      "editorCompatibility": "6000.3.0a2",
+      "version": "12.0.2",
+      "source": "registry",
+      "testable": false
+    },
     "com.unity.2d.sprite@1.0.0": {
       "name": "com.unity.2d.sprite",
       "displayName": "2D Sprite",
@@ -17,6 +47,16 @@
       "editorCompatibility": "2019.2.0a1",
       "version": "1.0.0",
       "source": "builtin",
+      "testable": false
+    },
+    "com.unity.2d.spriteshape@13.0.0": {
+      "name": "com.unity.2d.spriteshape",
+      "displayName": "2D SpriteShape",
+      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.2d.spriteshape@0738bab11647",
+      "fingerprint": "0738bab116473980325be8cdb7c3c42ab6961778",
+      "editorCompatibility": "6000.3.0a2",
+      "version": "13.0.0",
+      "source": "registry",
       "testable": false
     },
     "com.unity.2d.tilemap@1.0.0": {
@@ -29,23 +69,23 @@
       "source": "builtin",
       "testable": false
     },
-    "com.unity.ai.navigation@2.0.14": {
-      "name": "com.unity.ai.navigation",
-      "displayName": "AI Navigation",
-      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.ai.navigation@134dd6a3b97b",
-      "fingerprint": "134dd6a3b97bb75be809e267fbcd9c5071579dd2",
-      "editorCompatibility": "6000.0.0a1",
-      "version": "2.0.14",
+    "com.unity.2d.tilemap.extras@6.0.3": {
+      "name": "com.unity.2d.tilemap.extras",
+      "displayName": "2D Tilemap Extras",
+      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.2d.tilemap.extras@58739e072909",
+      "fingerprint": "58739e072909e7c1a00c2b86ac189978494d82e6",
+      "editorCompatibility": "6000.3.0a1",
+      "version": "6.0.3",
       "source": "registry",
       "testable": false
     },
-    "com.unity.analytics@3.8.2": {
-      "name": "com.unity.analytics",
-      "displayName": "Analytics Library",
-      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.analytics@c9d14a6bdec6",
-      "fingerprint": "c9d14a6bdec6bc414ff1cab77dd82647a9fa1334",
-      "editorCompatibility": "2019.3.0a1",
-      "version": "3.8.2",
+    "com.unity.2d.tooling@1.0.4": {
+      "name": "com.unity.2d.tooling",
+      "displayName": "2D Tooling",
+      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.2d.tooling@04422e023209",
+      "fingerprint": "04422e0232093804a1590b2194239896d20adc42",
+      "editorCompatibility": "6000.3.0a1",
+      "version": "1.0.4",
       "source": "registry",
       "testable": false
     },
@@ -79,6 +119,16 @@
       "source": "registry",
       "testable": false
     },
+    "com.unity.inputsystem@1.20.0": {
+      "name": "com.unity.inputsystem",
+      "displayName": "Input System",
+      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.inputsystem@7a4e1a2a8194",
+      "fingerprint": "7a4e1a2a81941121ffc0721a14009b46299dada1",
+      "editorCompatibility": "6000.0.0a1",
+      "version": "1.20.0",
+      "source": "registry",
+      "testable": false
+    },
     "com.unity.multiplayer.center@1.0.1": {
       "name": "com.unity.multiplayer.center",
       "displayName": "Multiplayer Center",
@@ -86,6 +136,16 @@
       "fingerprint": "f01f4ba8d00afa4e957bddf0fcd1612a564401ff",
       "editorCompatibility": "6000.0.0a1",
       "version": "1.0.1",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.render-pipelines.universal@17.3.0": {
+      "name": "com.unity.render-pipelines.universal",
+      "displayName": "Universal Render Pipeline",
+      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.render-pipelines.universal@a8b4b2fc3560",
+      "fingerprint": "a8b4b2fc356030a46ed5ab1d1ec6d78ac3443c2a",
+      "editorCompatibility": "6000.3.0a1",
+      "version": "17.3.0",
       "source": "builtin",
       "testable": false
     },
@@ -119,13 +179,13 @@
       "source": "builtin",
       "testable": false
     },
-    "com.unity.xr.legacyinputhelpers@2.1.13": {
-      "name": "com.unity.xr.legacyinputhelpers",
-      "displayName": "XR Legacy Input Helpers",
-      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.xr.legacyinputhelpers@9535ff2c27ac",
-      "fingerprint": "9535ff2c27ac3e8dfb63877c36641a1cc1a48c14",
-      "editorCompatibility": "2019.4.0a1",
-      "version": "2.1.13",
+    "com.unity.visualscripting@1.9.12": {
+      "name": "com.unity.visualscripting",
+      "displayName": "Visual Scripting",
+      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.visualscripting@4edfcc09512f",
+      "fingerprint": "4edfcc09512f786fe1a7f50476d320b36dab9676",
+      "editorCompatibility": "6000.0.0a1",
+      "version": "1.9.12",
       "source": "registry",
       "testable": false
     },
@@ -427,33 +487,103 @@
       "source": "builtin",
       "testable": false
     },
-    "com.unity.services.analytics@6.3.0": {
-      "name": "com.unity.services.analytics",
-      "displayName": "Analytics",
-      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.services.analytics@cde4e6cf92f9",
-      "fingerprint": "cde4e6cf92f9fcb43ce29d380df0e9c0b9428e6c",
-      "editorCompatibility": "2022.3.0a1",
-      "version": "6.3.0",
+    "com.unity.render-pipelines.core@17.3.0": {
+      "name": "com.unity.render-pipelines.core",
+      "displayName": "Scriptable Render Pipeline Core",
+      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.render-pipelines.core@0bb36005e9ba",
+      "fingerprint": "0bb36005e9ba80bf8ec214731ef075a7f779be82",
+      "editorCompatibility": "6000.3.0a1",
+      "version": "17.3.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.shadergraph@17.3.0": {
+      "name": "com.unity.shadergraph",
+      "displayName": "Shader Graph",
+      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.shadergraph@30c2e3926b79",
+      "fingerprint": "30c2e3926b795f10eee4e32147dad895f8fd0c5f",
+      "editorCompatibility": "6000.3.0a1",
+      "version": "17.3.0",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.render-pipelines.universal-config@17.0.3": {
+      "name": "com.unity.render-pipelines.universal-config",
+      "displayName": "Universal Render Pipeline Config",
+      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.render-pipelines.universal-config@8dc1aab4af1d",
+      "fingerprint": "8dc1aab4af1d718781689a36ed5231a35ad1a524",
+      "editorCompatibility": "6000.0.0a1",
+      "version": "17.0.3",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.2d.common@12.0.4": {
+      "name": "com.unity.2d.common",
+      "displayName": "2D Common",
+      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.2d.common@3e42aeccb30d",
+      "fingerprint": "3e42aeccb30d663c0e27cad062507d5603247d7a",
+      "editorCompatibility": "6000.3.0a2",
+      "version": "12.0.4",
       "source": "registry",
       "testable": false
     },
-    "com.unity.services.core@1.18.0": {
-      "name": "com.unity.services.core",
-      "displayName": "Services Core",
-      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.services.core@3464cb68d709",
-      "fingerprint": "3464cb68d7096e9749b8bf60588cfe0568b643fc",
-      "editorCompatibility": "2022.3.0a1",
-      "version": "1.18.0",
+    "com.unity.mathematics@1.3.3": {
+      "name": "com.unity.mathematics",
+      "displayName": "Mathematics",
+      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.mathematics@19a9377c4ffa",
+      "fingerprint": "19a9377c4ffa59370edad3e6a34e4445529badde",
+      "editorCompatibility": "2021.3.0a1",
+      "version": "1.3.3",
       "source": "registry",
       "testable": false
     },
-    "com.unity.nuget.newtonsoft-json@3.2.2": {
-      "name": "com.unity.nuget.newtonsoft-json",
-      "displayName": "Newtonsoft Json",
-      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.nuget.newtonsoft-json@4dfd81071c64",
-      "fingerprint": "4dfd81071c6475bb9c114f920bfb4e3fc5e28c6a",
-      "editorCompatibility": "2018.4.0a1",
-      "version": "3.2.2",
+    "com.unity.collections@2.6.8": {
+      "name": "com.unity.collections",
+      "displayName": "Collections",
+      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.collections@84e8eb3fc12e",
+      "fingerprint": "84e8eb3fc12e12e29c3b3d102c904e2f8f2ca6e5",
+      "editorCompatibility": "2022.3.20f1",
+      "version": "2.6.8",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.searcher@4.9.5": {
+      "name": "com.unity.searcher",
+      "displayName": "Searcher",
+      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.searcher@a463122f2c00",
+      "fingerprint": "a463122f2c00f83398f41790942a0793431e70ea",
+      "editorCompatibility": "6000.0.0a1",
+      "version": "4.9.5",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.burst@1.8.30": {
+      "name": "com.unity.burst",
+      "displayName": "Burst",
+      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.burst@2f3d916873ea",
+      "fingerprint": "2f3d916873ea867ff077372df3fe42447ba7d4c6",
+      "editorCompatibility": "6000.0.0a1",
+      "version": "1.8.30",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.nuget.mono-cecil@1.11.6": {
+      "name": "com.unity.nuget.mono-cecil",
+      "displayName": "Mono Cecil",
+      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.nuget.mono-cecil@ecb9724e46ff",
+      "fingerprint": "ecb9724e46fff855c46a4f37f0a3377a3cfffc06",
+      "editorCompatibility": "2019.4.0a1",
+      "version": "1.11.6",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.test-framework.performance@3.5.0": {
+      "name": "com.unity.test-framework.performance",
+      "displayName": "Performance testing API",
+      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.test-framework.performance@8b56083ec0f0",
+      "fingerprint": "8b56083ec0f03c33121bea5c806c91b0fa2f2b69",
+      "editorCompatibility": "2020.3.0a1",
+      "version": "3.5.0",
       "source": "registry",
       "testable": false
     }
