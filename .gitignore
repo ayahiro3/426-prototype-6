@@ -106,4 +106,14 @@ InitTestScene*.unity*
 /UIElementsSchema/
 
 # Auto-generated cache in Assets folder
-/[Aa]ssets/[Ss]ceneDependencyCache*
+# Unity project lives in a subfolder
+**/[Ll]ibrary/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Bb]uild/
+**/[Bb]uilds/
+**/[Ll]ogs/
+**/[Uu]ser[Ss]ettings/
+**/[Mm]emoryCaptures/
+**/[Rr]ecordings/
+.DS_Store
