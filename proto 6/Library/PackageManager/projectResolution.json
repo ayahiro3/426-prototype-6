@@ -89,16 +89,6 @@
       "source": "builtin",
       "testable": false
     },
-    "com.unity.purchasing@4.15.1": {
-      "name": "com.unity.purchasing",
-      "displayName": "In App Purchasing",
-      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.purchasing@265595791a69",
-      "fingerprint": "265595791a696a3847a8a2af7d00be39558176fc",
-      "editorCompatibility": "2020.3.0a1",
-      "version": "4.15.1",
-      "source": "registry",
-      "testable": false
-    },
     "com.unity.test-framework@1.6.0": {
       "name": "com.unity.test-framework",
       "displayName": "Test Framework",
@@ -437,16 +427,6 @@
       "source": "builtin",
       "testable": false
     },
-    "com.unity.services.core@1.18.0": {
-      "name": "com.unity.services.core",
-      "displayName": "Services Core",
-      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.services.core@3464cb68d709",
-      "fingerprint": "3464cb68d7096e9749b8bf60588cfe0568b643fc",
-      "editorCompatibility": "2022.3.0a1",
-      "version": "1.18.0",
-      "source": "registry",
-      "testable": false
-    },
     "com.unity.services.analytics@6.3.0": {
       "name": "com.unity.services.analytics",
       "displayName": "Analytics",
@@ -454,6 +434,16 @@
       "fingerprint": "cde4e6cf92f9fcb43ce29d380df0e9c0b9428e6c",
       "editorCompatibility": "2022.3.0a1",
       "version": "6.3.0",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.services.core@1.18.0": {
+      "name": "com.unity.services.core",
+      "displayName": "Services Core",
+      "resolvedPath": "/Users/addyyahiro/Documents/GitHub/426-prototype-6/proto 6/Library/PackageCache/com.unity.services.core@3464cb68d709",
+      "fingerprint": "3464cb68d7096e9749b8bf60588cfe0568b643fc",
+      "editorCompatibility": "2022.3.0a1",
+      "version": "1.18.0",
       "source": "registry",
       "testable": false
     },
