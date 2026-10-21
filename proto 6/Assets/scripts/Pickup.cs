@@ -12,7 +12,7 @@ public class Pickup : MonoBehaviour
     [SerializeField] Color appleColor = new Color(0.92f, 0.92f, 0.92f);
     [SerializeField] int appleGrowth = 1;
     [Tooltip("Growth for switching to a different color.")]
-    [SerializeField] int switchGrowth = 2;
+    // [SerializeField] int switchGrowth = 2;
 
     [Header("Idle animation")]
     [SerializeField] float pulseAmount = 0.1f;
@@ -63,7 +63,7 @@ public class Pickup : MonoBehaviour
         else if (snake.CurrentColor != ColorIndex)
         {
             snake.SetColor(ColorIndex);
-            snake.Grow(switchGrowth);
+            // snake.Grow(switchGrowth);
         }
 
        Debug.Log("Pickup sound code reached!");

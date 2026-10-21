@@ -8,7 +8,7 @@ public class ColorRow : MonoBehaviour
     [Tooltip("A 1x1 unit square sprite with ColorBlock and a BoxCollider2D.")]
     [SerializeField] ColorBlock blockPrefab;
     [SerializeField] float thickness = 0.4f;
-    [SerializeField] int passGrowth = 2;
+    // [SerializeField] int passGrowth = 2;
 
     [SerializeField] AudioClip deathSound;
     [SerializeField] AudioClip successSound;
@@ -16,7 +16,7 @@ public class ColorRow : MonoBehaviour
     readonly List<ColorBlock> blocks = new List<ColorBlock>();
     float left, width, laneWidth, slideSpeed, offset;
     int lanes;
-    bool passed;
+    // bool passed;
 
     public void Build(float leftEdge, float rowWidth, float slide)
     {
@@ -69,23 +69,9 @@ public class ColorRow : MonoBehaviour
         }
     }
 
-    public void OnBlockHit(ColorBlock block, SnakeController snake)
+        public void OnBlockHit(ColorBlock block, SnakeController snake)
     {
         if (snake.CurrentColor != block.ColorIndex)
-        {
-            if (deathSound != null)
-            AudioSource.PlayClipAtPoint(deathSound, transform.position);
-
             snake.Die();
-            return;
-        }
-
-        if (!passed)
-        {
-            passed = true;
-            if (successSound != null)
-            AudioSource.PlayClipAtPoint(successSound, transform.position);
-            snake.Grow(passGrowth);
-        }
     }
 }
