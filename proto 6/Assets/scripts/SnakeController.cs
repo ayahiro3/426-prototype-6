@@ -8,10 +8,11 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer))]
 public class SnakeController : MonoBehaviour
 {
+    [Tooltip("Seconds until the snake reaches max climb speed.")]
+    [SerializeField] float secondsToMaxSpeed = 90f;
+    float runTime;
     [Header("Climbing")]
     [SerializeField] float startClimbSpeed = 3.5f;
-    [Tooltip("Climb speed gained per second, so the game slowly gets harder.")]
-    [SerializeField] float climbAcceleration = 0.04f;
     [SerializeField] float maxClimbSpeed = 8f;
 
     [Header("Steering")]
@@ -19,6 +20,11 @@ public class SnakeController : MonoBehaviour
     [SerializeField] float sideSpeed = 12f;
     [Tooltip("Keeps the head this far inside the screen edges.")]
     [SerializeField] float sideMargin = 0.3f;
+    [Tooltip("Roughly how long it takes to catch up to the cursor. Higher = smoother, lazier turns.")]
+    [SerializeField] float steerSmoothTime = 0.18f;
+    [Tooltip("How fast the head rotates to face where it's going, in degrees per second.")]
+    [SerializeField] float headTurnSpeed = 540f;
+    float sideVelocity;
 
     [Header("Body")]
     [SerializeField] SpriteRenderer segmentPrefab;
@@ -121,20 +127,23 @@ public class SnakeController : MonoBehaviour
         if (!IsAlive || cam == null) return;
 
         float dt = Time.fixedDeltaTime;
-        ClimbSpeed = Mathf.Min(maxClimbSpeed, ClimbSpeed + climbAcceleration * dt);
+        runTime += dt;
+        float t = Mathf.Clamp01(runTime / secondsToMaxSpeed);
+        ClimbSpeed = Mathf.Lerp(startClimbSpeed, maxClimbSpeed, t * t); // slow start, then speeds up faster and faster
 
         float halfWidth = cam.orthographicSize * cam.aspect;
         float camX = cam.transform.position.x;
         float clampedTarget = Mathf.Clamp(targetX, camX - halfWidth + sideMargin, camX + halfWidth - sideMargin);
 
         Vector2 pos = rb.position;
-        Vector2 next = new Vector2(
-            Mathf.MoveTowards(pos.x, clampedTarget, sideSpeed * dt),
-            pos.y + ClimbSpeed * dt);
+        // Ease toward the cursor: speeds up and slows down smoothly instead of snapping.
+        float newX = Mathf.SmoothDamp(pos.x, clampedTarget, ref sideVelocity, steerSmoothTime, sideSpeed, dt);
+        Vector2 next = new Vector2(newX, pos.y + ClimbSpeed * dt);
 
-        // Point the head the way it's actually moving (sprite should face up).
+        // Turn the head toward where it's going instead of snapping (sprite should face up).
         Vector2 vel = next - pos;
-        rb.MoveRotation(Mathf.Atan2(vel.y, vel.x) * Mathf.Rad2Deg - 90f);
+        float wantAngle = Mathf.Atan2(vel.y, vel.x) * Mathf.Rad2Deg - 90f;
+        rb.MoveRotation(Mathf.MoveTowardsAngle(rb.rotation, wantAngle, headTurnSpeed * dt));
         rb.MovePosition(next);
 
         RecordPath(next);
