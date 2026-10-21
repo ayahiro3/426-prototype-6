@@ -28,4 +28,16 @@ public static class InputHelper
 #endif
         }
     }
+        public static bool RestartPressed
+    {
+        get
+        {
+#if ENABLE_INPUT_SYSTEM
+            var kb = UnityEngine.InputSystem.Keyboard.current;
+            return kb != null && kb.rKey.wasPressedThisFrame;
+#else
+            return Input.GetKeyDown(KeyCode.R);
+#endif
+        }
+    }
 }

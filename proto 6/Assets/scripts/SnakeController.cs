@@ -33,6 +33,14 @@ public class SnakeController : MonoBehaviour
     [Tooltip("How fast a color change ripples down the body, in segments per second.")]
     [SerializeField] float colorRippleSpeed = 40f;
 
+    [Header("Hunger")]
+    [Tooltip("Seconds between losing a tail segment. Eating an apple resets the timer.")]
+    [SerializeField] float shrinkInterval = 2.5f;
+    [Tooltip("How long the tail blinks before it drops off.")]
+    [SerializeField] float shrinkWarningTime = 0.7f;
+
+    float hungerTimer;
+
     public int CurrentColor { get; private set; }
     public bool IsAlive { get; private set; } = true;
     public int Length => segments.Count;
@@ -93,9 +101,23 @@ public class SnakeController : MonoBehaviour
         ReadMouse();
         UpdateColors();
     }
+     // Without apples the snake loses a tail segment every shrinkInterval seconds.
+    // Out of segments and still starving = game over.
+    void UpdateHunger(float dt)
+    {
+        hungerTimer += dt;
+        if (hungerTimer < shrinkInterval) return;
+
+        hungerTimer = 0f;
+        if (segments.Count > 0) CutFrom(segments.Count - 1);
+        else Die();
+    }
+
+    public void FeedApple() => hungerTimer = 0f;
 
     void FixedUpdate()
     {
+        
         if (!IsAlive || cam == null) return;
 
         float dt = Time.fixedDeltaTime;
@@ -117,6 +139,8 @@ public class SnakeController : MonoBehaviour
 
         RecordPath(next);
         CheckSegmentHits();
+        UpdateHunger(dt);
+        
     }
 
     void LateUpdate()
@@ -277,6 +301,13 @@ public class SnakeController : MonoBehaviour
         {
             Color want = i < reached ? target : old;
             segments[i].color = Color.Lerp(segments[i].color, want, blend);
+        }
+        if (shrinkInterval - hungerTimer < shrinkWarningTime)
+        {
+            SpriteRenderer next = segments.Count > 0 ? segments[segments.Count - 1] : headRenderer;
+            Color c = next.color;
+            c.a = 0.25f + 0.75f * Mathf.Abs(Mathf.Sin(Time.time * 18f));
+            next.color = c;
         }
     }
 

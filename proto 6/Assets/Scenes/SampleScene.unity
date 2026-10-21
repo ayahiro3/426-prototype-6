@@ -399,6 +399,8 @@ MonoBehaviour:
   startColor: 0
   colorBlendSpeed: 12
   colorRippleSpeed: 40
+  shrinkInterval: 2.5
+  shrinkWarningTime: 0.7
 --- !u!58 &1565522975
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -433,8 +435,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Offset: {x: 0.078596056, y: 0.18700439}
+  m_Radius: 0.6734534
 --- !u!50 &1565522976
 Rigidbody2D:
   serializedVersion: 5
@@ -511,7 +513,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1000
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b0dd9ef6684214cc980ff3174524e2da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

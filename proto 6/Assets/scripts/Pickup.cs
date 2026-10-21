@@ -58,6 +58,7 @@ public class Pickup : MonoBehaviour
         if (type == PickupType.Apple)
         {
             snake.Grow(appleGrowth);
+            snake.FeedApple();
         }
         else if (snake.CurrentColor != ColorIndex)
         {
