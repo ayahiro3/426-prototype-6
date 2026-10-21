@@ -201,7 +201,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -580,6 +580,8 @@ MonoBehaviour:
   colorSwitchChance: 0.7
   applesPerGap: 2
   sideMargin: 0.6
+  obstaclePrefab: {fileID: -7102108647212126488, guid: 90642d92780494ba09c8692f706c4021, type: 3}
+  obstaclesPerGap: 3
 --- !u!4 &1937422184
 Transform:
   m_ObjectHideFlags: 0

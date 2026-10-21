@@ -10,6 +10,9 @@ public class ColorRow : MonoBehaviour
     [SerializeField] float thickness = 0.4f;
     [SerializeField] int passGrowth = 2;
 
+    [SerializeField] AudioClip deathSound;
+    [SerializeField] AudioClip successSound;
+
     readonly List<ColorBlock> blocks = new List<ColorBlock>();
     float left, width, laneWidth, slideSpeed, offset;
     int lanes;
@@ -70,6 +73,9 @@ public class ColorRow : MonoBehaviour
     {
         if (snake.CurrentColor != block.ColorIndex)
         {
+            if (deathSound != null)
+            AudioSource.PlayClipAtPoint(deathSound, transform.position);
+
             snake.Die();
             return;
         }
@@ -77,6 +83,8 @@ public class ColorRow : MonoBehaviour
         if (!passed)
         {
             passed = true;
+            if (successSound != null)
+            AudioSource.PlayClipAtPoint(successSound, transform.position);
             snake.Grow(passGrowth);
         }
     }

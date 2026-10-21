@@ -19,6 +19,8 @@ public class Pickup : MonoBehaviour
     [SerializeField] float pulseSpeed = 4f;
     [SerializeField] float spinSpeed = 90f;
 
+    [SerializeField] AudioClip pickupSound;
+
     public PickupType Type => type;
     public int ColorIndex { get; private set; }
 
@@ -63,6 +65,17 @@ public class Pickup : MonoBehaviour
             snake.Grow(switchGrowth);
         }
 
+       Debug.Log("Pickup sound code reached!");
+
+    if (pickupSound != null)
+    {
+        Debug.Log("Sound is assigned!");
+        AudioSource.PlayClipAtPoint(pickupSound, transform.position);
+    }
+    else
+    {
+        Debug.LogWarning("Sound is missing!");
+    }
         Destroy(gameObject);
     }
 }

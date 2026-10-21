@@ -158,3 +158,4 @@ MonoBehaviour:
   pulseAmount: 0.1
   pulseSpeed: 4
   spinSpeed: 90
+  pickupSound: {fileID: 8300000, guid: b2bd593a471de4c4381999fb0cf936ca, type: 3}

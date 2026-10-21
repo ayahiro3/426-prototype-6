@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] float colorSwitchChance = 0.7f;
     [SerializeField] int applesPerGap = 2;
     [SerializeField] float sideMargin = 0.6f;
+    [SerializeField] Obstacle obstaclePrefab;
+    [SerializeField] int obstaclesPerGap = 2;
 
     readonly List<GameObject> spawned = new List<GameObject>();
     float nextRowY;
@@ -109,6 +111,19 @@ public class GameManager : MonoBehaviour
             if (Mathf.Abs(y - mid) < 0.6f) y += 1f; // keep apples off the color switch
             Pickup a = Instantiate(applePrefab, new Vector3(RandomX(camX, halfWidth), y, 0f), Quaternion.identity);
             spawned.Add(a.gameObject);
+        }
+
+        for (int i = 0; i < obstaclesPerGap; i++)
+        {
+             float y = Random.Range(gapStart, gapEnd);
+
+            Obstacle o = Instantiate(
+            obstaclePrefab,
+            new Vector3(RandomX(camX, halfWidth), y, 0f),
+            Quaternion.identity
+            );
+
+            spawned.Add(o.gameObject);
         }
 
         nextRowY += gap;
